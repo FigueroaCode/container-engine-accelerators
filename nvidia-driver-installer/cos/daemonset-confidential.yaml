@@ -53,10 +53,6 @@ spec:
                 operator: In
                 values:
                   - TDX
-              - key: node.kubernetes.io/instance-type
-                operator: In
-                values:
-                  - a3-highgpu-1g
       tolerations:
       - operator: "Exists"
       hostNetwork: true
@@ -115,6 +111,8 @@ spec:
           mountPath: /root
         - name: cos-tools
           mountPath: /build/cos-tools
+        - name: nvidia-config
+          mountPath: /etc/nvidia
         command:
         - bash
         - -c

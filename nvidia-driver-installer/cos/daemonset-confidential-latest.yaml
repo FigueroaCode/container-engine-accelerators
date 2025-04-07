@@ -53,10 +53,6 @@ spec:
                 operator: In
                 values:
                   - TDX
-              - key: node.kubernetes.io/instance-type
-                operator: In
-                values:
-                  - a3-highgpu-1g
       tolerations:
       - operator: "Exists"
       hostNetwork: true
