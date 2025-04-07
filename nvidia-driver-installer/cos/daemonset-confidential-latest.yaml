@@ -111,6 +111,8 @@ spec:
           mountPath: /root
         - name: cos-tools
           mountPath: /build/cos-tools
+        - name: nvidia-config
+          mountPath: /etc/nvidia
         command:
         - bash
         - -c
